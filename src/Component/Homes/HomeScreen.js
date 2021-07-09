@@ -9,9 +9,10 @@ const HomeScreen = () => {
   const slider2 = useRef();
 
   const [mySlider, setMySlider] = useState([
-    "/images/ice.png",
-    "/images/ice1.png",
-    "/images/ice2.png",
+    "/images/shirt.png",
+    "/images/shirt1.png",
+    "/images/shirt2.png",
+    "/images/shirt3.png",
   ]);
 
   const slideColor = ["white", "gray", "gray"];
@@ -92,6 +93,7 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 `;
 
 const Wrapper = styled.div`

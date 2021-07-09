@@ -32,13 +32,23 @@ const Content = () => {
         <Circle>-</Circle>
         <Num>1</Num>
         <Circle2>+</Circle2>
+
+        <Select>
+          <option>Choose a color</option>
+          <option>black</option>
+          <option>Gray</option>
+          <option>White</option>
+        </Select>
+        <Select1>
+          <option>Choose a size</option>
+          <option>Extra small</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+          <option>Extra Large</option>
+        </Select1>
       </CircleHolder>
-      <Select>
-        <option>Choose a color</option>
-        <option>black</option>
-        <option>Gray</option>
-        <option>White</option>
-      </Select>
+      <Button>Add to cart</Button>
     </Container>
   );
 };
@@ -50,6 +60,7 @@ const Container = styled.div`
   width: 500px;
   height: 500px;
   margin-left: 60px;
+  margin-top: 100px;
 `;
 
 const HeaderText = styled.div`
@@ -119,6 +130,7 @@ const CircleHolder = styled.div`
   width: 50px;
   display: flex;
   margin-top: 20px;
+
 `;
 
 const Circle = styled.div`
@@ -162,4 +174,40 @@ const Circle2 = styled.div`
   }
 `;
 
-const Select = styled.select``;
+const Select = styled.select`
+  height: 40px;
+  width: 150px;
+  background-color: transparent;
+  color: lightgray;
+  border: 2px solid #ed6c8a;
+  border-radius: 5px;
+  margin-left: 10px;
+  option {
+    color: black;
+  }
+`;
+
+const Select1 = styled.select`
+  height: 40px;
+  width: 150px;
+  background-color: transparent;
+  color: lightgray;
+  border: 2px solid #ed6c8a;
+  border-radius: 5px;
+  margin-left: 10px;
+  option {
+    color: black;
+  }
+`;
+
+const Button = styled.div`
+  height: 40px;
+  width: 170px;
+  background: linear-gradient(180deg, #ed6c8a, #f18775);
+  font-size: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+`;

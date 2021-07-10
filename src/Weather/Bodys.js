@@ -53,6 +53,11 @@ const Bodys = () => {
 
     return `${days} ${dates} ${months} ${year}`;
   };
+
+  useEffect(() => {
+    SubmitSearch();
+  }, []);
+
   return (
     <Container>
       <Hello>
@@ -65,8 +70,10 @@ const Bodys = () => {
         />
       </Hello>
       <Date>{dataBuilder(new Date())}</Date>
-      <Loc>New York city, Ln</Loc>
-      <Cen>0°c</Cen>
+      <Loc>
+        {fetchWeather.name},{fetchWeather.sys.country}
+      </Loc>
+      <Cen>{math.round(fetchWeather.main.temp)}</Cen>
       <Description>Rainy</Description>
     </Container>
   );
